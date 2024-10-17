@@ -1,0 +1,12 @@
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.exe
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.deps.json
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.runtimeconfig.json
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.runtimeconfig.dev.json
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.dll
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\bin\Debug\netcoreapp3.1\argumentpassing.pdb
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.AssemblyInfoInputs.cache
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.AssemblyInfo.cs
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.csproj.CoreCompileInputs.cache
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.dll
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.pdb
+C:\Users\233543\source\repos\argumentpassing\argumentpassing\obj\Debug\netcoreapp3.1\argumentpassing.genruntimeconfig.cache

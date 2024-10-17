@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "argumentpassing": {
+      "commandName": "Project",
+      "commandLineArgs": "one two three"
+    }
+  }
+}
