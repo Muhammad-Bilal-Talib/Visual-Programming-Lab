@@ -1,0 +1,14 @@
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.AssemblyInfoInputs.cache
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.AssemblyInfo.cs
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\bin\Debug\net8.0\EX#03 LAB 04.exe
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\bin\Debug\net8.0\EX#03 LAB 04.deps.json
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\bin\Debug\net8.0\EX#03 LAB 04.runtimeconfig.json
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\bin\Debug\net8.0\EX#03 LAB 04.dll
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\bin\Debug\net8.0\EX#03 LAB 04.pdb
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.dll
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\refint\EX#03 LAB 04.dll
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.pdb
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\EX#03 LAB 04.genruntimeconfig.cache
+C:\Users\PMLS\source\repos\EX#03 LAB 04\EX#03 LAB 04\obj\Debug\net8.0\ref\EX#03 LAB 04.dll
