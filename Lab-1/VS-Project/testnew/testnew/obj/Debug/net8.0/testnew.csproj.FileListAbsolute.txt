@@ -1,0 +1,14 @@
+C:\Users\PMLS\source\repos\testnew\testnew\bin\Debug\net8.0\testnew.exe
+C:\Users\PMLS\source\repos\testnew\testnew\bin\Debug\net8.0\testnew.deps.json
+C:\Users\PMLS\source\repos\testnew\testnew\bin\Debug\net8.0\testnew.runtimeconfig.json
+C:\Users\PMLS\source\repos\testnew\testnew\bin\Debug\net8.0\testnew.dll
+C:\Users\PMLS\source\repos\testnew\testnew\bin\Debug\net8.0\testnew.pdb
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.AssemblyInfoInputs.cache
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.AssemblyInfo.cs
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.dll
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\refint\testnew.dll
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.pdb
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\testnew.genruntimeconfig.cache
+C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0\ref\testnew.dll
