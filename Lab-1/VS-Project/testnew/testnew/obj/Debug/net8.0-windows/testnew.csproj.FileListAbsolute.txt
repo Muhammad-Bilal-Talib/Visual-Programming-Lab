@@ -1,4 +1,0 @@
-C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0-windows\testnew.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0-windows\testnew.AssemblyInfoInputs.cache
-C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0-windows\testnew.AssemblyInfo.cs
-C:\Users\PMLS\source\repos\testnew\testnew\obj\Debug\net8.0-windows\testnew.csproj.CoreCompileInputs.cache
