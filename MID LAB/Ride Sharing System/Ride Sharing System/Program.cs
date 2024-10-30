@@ -1,311 +1,381 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
-
-namespace ridesharing
+namespace RideSharingSystem
 {
-    public class  User
+    // Abstract User class
+    public abstract class User
     {
-        public string user_id { get; set; }
-        public string name { get; set; }
-        public string phonenumber { get; set; }
+        protected string UserId;
+        protected string name;
+        protected string phoneNumber;
 
-
-        public void Register()
-        { 
-            Console.Write("Enter your name:");
-            name=Console.ReadLine();
-            Console.Write("Enter your phone Number:");
-            phonenumber = Console.ReadLine();
-
-            Console.WriteLine("Register Successfully!");
+        public User(string userId, string name, string phoneNumber)
+        {
+            this.UserId = userId;
+            this.name = name;
+            SetPhoneNumber(phoneNumber);
         }
 
-        public void Login()
+        public virtual void DisplayProfile()
         {
-
+            Console.WriteLine($"User ID: {UserId}, Name: {name}, Phone Number: {phoneNumber}");
         }
 
-        public void displayprofile()
+        public string Name => name;
+
+        public void SetPhoneNumber(string phoneNumber)
         {
-            Console.WriteLine($"Your Name is: {name}");
-            Console.WriteLine($"Your PhoneNumber is: {phonenumber}");
+            if (Regex.IsMatch(phoneNumber, @"^\d{10}$"))
+            {
+                this.phoneNumber = phoneNumber;
+            }
+            else
+            {
+                throw new ArgumentException("Invalid phone number!");
+            }
         }
     }
 
-
-
+    // Rider class
     public class Rider : User
     {
-        public List<Trip> ridehistory = new List<Trip>();
+        private List<Trip> rideHistory;
 
-        Trip t=new Trip();
-
-        public void request_ride()
+        public Rider(string userId, string name, string phoneNumber) : base(userId, name, phoneNumber)
         {
-            Console.WriteLine("Enter your Current Loctaion:");
-            //ridehistory.
-            t.start_location= Console.ReadLine();
-
-            ridehistory.Add(t);
-
-            Console.WriteLine("Enter your Destination:");
-            //ridehistory.
-            t.destination = Console.ReadLine();
-
-            ridehistory.Add(t);
-
-
+            rideHistory = new List<Trip>();
         }
 
-        public void viewridehistory()
+        public void RequestRide(RideSharingSystem system)
         {
+            system.RequestRide(this);
+        }
 
-            Trip tr = new Trip();
-            tr.trip_id = "001";
+        public void ViewRideHistory()
+        {
+            Console.WriteLine($"{name}'s Ride History:");
+            foreach (var trip in rideHistory)
+            {
+                trip.DisplayTripDetails();
+            }
+        }
 
-                Console.WriteLine($"{tr.trip_id} From:{tr.start_location} To:{tr.destination} Fare:{tr.Fare}");
-               
-            
+        public void AddToRideHistory(Trip trip)
+        {
+            rideHistory.Add(trip);
         }
     }
 
-
-
-
+    // Driver class
     public class Driver : User
     {
-        public string driver_id { get; set; }
-        public string vehicledetails { get; set; }
-        public string isavailable { get; set; }
+        private string driverId;
+        private string vehicleDetails;
+        private bool isAvailable;
+        private List<Trip> tripHistory;
 
-
-        public List<Trip> triphistory = new List<Trip>();
-
-        Trip t = new Trip("Hamza");
-
-        public void acceptride()
+        public Driver(string userId, string name, string phoneNumber, string driverId, string vehicleDetails) : base(userId, name, phoneNumber)
         {
-            Console.WriteLine($"{t.driver_name} accepted the ride request from {name}");
+            this.driverId = driverId;
+            this.vehicleDetails = vehicleDetails;
+            isAvailable = true;
+            tripHistory = new List<Trip>();
         }
 
-        public void viewtriphistory()
+        public void AcceptRide(Trip trip)
         {
-            Trip tr = new Trip();
-            tr.trip_id = "001";
-            tr.Fare = 45;
-
-            Console.WriteLine($"{tr.trip_id} From:{tr.start_location} To:{tr.destination} Fare:{tr.Fare}$");
+            if (isAvailable)
+            {
+                trip.StartTrip();
+                tripHistory.Add(trip);
+                Console.WriteLine($"{name} accepted the ride.");
+                isAvailable = false;
+            }
+            else
+            {
+                Console.WriteLine($"{name} is currently unavailable.");
+            }
         }
 
-        public void toggleavailability()
+        public void ViewTripHistory()
         {
-            Console.WriteLine($"Yes, Available");
+            Console.WriteLine($"{name}'s Trip History:");
+            foreach (var trip in tripHistory)
+            {
+                trip.DisplayTripDetails();
+            }
         }
+
+        public void ToggleAvailability()
+        {
+            isAvailable = !isAvailable;
+            Console.WriteLine($"{name} is now " + (isAvailable ? "available" : "unavailable"));
+        }
+
+        public bool IsAvailable => isAvailable;
     }
 
-
+    // Trip class
     public class Trip
     {
-        public string trip_id { get; set; }
-        public string rider_name { get; set; }
-        public string driver_name { get; set; }
+        public string TripId { get; private set; }
+        public string RiderName { get; private set; }
+        public string DriverName { get; private set; }
+        public string StartLocation { get; set; }
+        public string Destination { get; set; }
+        public decimal Fare { get; private set; }
+        public string Status { get; private set; }
 
-        public string start_location { get; set; }
-        public string destination { get; set; }
-        public int Fare { get; set; }
+        private static int idCounter = 1;
 
-        public string status { get; set; }
-
-       public Trip(string n)
+        public Trip(string riderName, string driverName, string startLocation, string destination)
         {
-            driver_name = n;
+            TripId = "T" + (idCounter++).ToString();
+            RiderName = riderName;
+            DriverName = driverName;
+            StartLocation = startLocation;
+            Destination = destination;
+            Fare = CalculateFare();
+            Status = "Pending";
         }
 
-        public Trip() {}
-
-        public List<Trip> triphistory = new List<Trip>();
-
-        public void register_driver()
+        public decimal CalculateFare()
         {
-            trip_id = "001";
-            Console.WriteLine("Enter Driver Name:");
-            driver_name = Console.ReadLine();
 
-            Console.WriteLine("Driver Registered Successfully......");
+            var random = new Random();
+            return random.Next(10, 50);
         }
 
-        public void start_trip()
+        public void StartTrip()
         {
-            Console.WriteLine("trip started.......");
+            Status = "In Progress";
+            Console.WriteLine($"Trip {TripId} started from {StartLocation} to {Destination}. Fare: {Fare}");
         }
 
-        public void end_trip()
+        public void EndTrip()
         {
-            Console.WriteLine("trip Ended.......");
+            Status = "Completed";
+            Console.WriteLine($"Trip {TripId} completed. Final fare: {Fare}");
         }
 
-        public void Display_tripdetails()
+        public void DisplayTripDetails()
         {
-
+            Console.WriteLine($"Trip ID: {TripId}, Rider: {RiderName}, Driver: {DriverName}, Start: {StartLocation}, Destination: {Destination}, Fare: {Fare}, Status: {Status}");
         }
     }
 
-    public class rideSharingSystem
+    // RideSharingSystem class
+    public class RideSharingSystem
     {
-        public List<Rider> registered_riders = new List<Rider>();
+        private List<Rider> registeredRiders;
+        private List<Driver> registeredDrivers;
+        private List<Trip> availableTrips;
 
-        public List<Driver> registered_drivers = new List<Driver>();
-
-        public List<Trip> available_trips = new List<Trip>();
-
-        Trip t=new Trip();
-
-        public void register_user()
+        public RideSharingSystem()
         {
-
+            registeredRiders = new List<Rider>();
+            registeredDrivers = new List<Driver>();
+            availableTrips = new List<Trip>();
         }
 
-        public void request_ride()
+        public void RegisterUser()
         {
+            Console.WriteLine("Registering user as Rider or Driver? (r/d)");
+            string userType = Console.ReadLine()?.ToLower();
+            Console.WriteLine("Enter Name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter Phone Number (10 digits):");
+            string phoneNumber = Console.ReadLine();
+            string userId = Guid.NewGuid().ToString();
 
-        }
-
-        public void findavailabledriver()
-        {
-            Console.WriteLine("Yes, Driver Available......");
-        }
-
-        public void complete_trip()
-        {
-            Console.WriteLine($"trip From {t.start_location} to {t.destination} has been Completed. Fare is:{t.Fare}");
-        }
-
-        public void display_all_trips()
-        {
-            Trip tr = new Trip();
-            tr.trip_id = "001";
-
-            Console.WriteLine($"{tr.trip_id} From:{tr.start_location} To:{tr.destination} Fare:{tr.Fare}");
-        }
-
-
-
-
-
-    }
-
-
-
-
-
-
-    class program
-    {
-
-        static void Main()
-        {
-            int choice;
-
-            //  Trip t = new Trip("Hamza");
-            Trip t = new Trip();
-            Rider rid = new Rider();
-            rideSharingSystem rss = new rideSharingSystem();
-            Driver d = new Driver();
-
-
-
-            Console.WriteLine("1.Register as Rider");
-            Console.WriteLine("2.Register as Driver");
-            Console.WriteLine("3.Request a Ride");
-            Console.WriteLine("4.Accept a Ride(Driver)");
-            Console.WriteLine("5.Complete a Trip (Driver)");
-            Console.WriteLine("6.View Ride History (Rider)");
-            Console.WriteLine("7.View Trip History (Driver)");
-            Console.WriteLine("8.Display All Trips");
-            Console.WriteLine("9.Exit");
-
-
-            do
+            if (userType == "r")
             {
-                Console.Write("Enter Your Choice:");
-                choice = int.Parse(Console.ReadLine());
+                Rider rider = new Rider(userId, name, phoneNumber);
+                registeredRiders.Add(rider);
+                Console.WriteLine("Rider registered successfully.");
+            }
+            else if (userType == "d")
+            {
+                Console.WriteLine("Enter Driver ID:");
+                string driverId = Console.ReadLine();
+                Console.WriteLine("Enter Vehicle Details:");
+                string vehicleDetails = Console.ReadLine();
+                Driver driver = new Driver(userId, name, phoneNumber, driverId, vehicleDetails);
+                registeredDrivers.Add(driver);
+                Console.WriteLine("Driver registered successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid user type.");
+            }
+        }
+
+        public void RequestRide(Rider rider)
+        {
+            Console.WriteLine("Enter Start Location:");
+            string startLocation = Console.ReadLine();
+            Console.WriteLine("Enter Destination:");
+            string destination = Console.ReadLine();
+
+            Driver availableDriver = FindAvailableDriver();
+            if (availableDriver != null)
+            {
+                Trip trip = new Trip(rider.Name, availableDriver.Name, startLocation, destination);
+                availableTrips.Add(trip);
+                availableDriver.AcceptRide(trip);
+                rider.AddToRideHistory(trip);
+            }
+            else
+            {
+                Console.WriteLine("No available drivers at the moment.");
+            }
+        }
+
+        public Driver FindAvailableDriver()
+        {
+            foreach (var driver in registeredDrivers)
+            {
+                if (driver.IsAvailable)
+                {
+                    return driver;
+                }
+            }
+            return null;
+        }
+
+        public void CompleteTrip(Driver driver)
+        {
+            Console.WriteLine("Enter Trip ID to complete:");
+            string tripId = Console.ReadLine();
+            Trip trip = availableTrips.Find(t => t.TripId == tripId);
+
+            if (trip != null)
+            {
+                trip.EndTrip();
+                driver.ToggleAvailability();
+                availableTrips.Remove(trip);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Trip ID.");
+            }
+        }
+
+        public void DisplayAllTrips()
+        {
+            Console.WriteLine("Available Trips:");
+            foreach (var trip in availableTrips)
+            {
+                trip.DisplayTripDetails();
+            }
+        }
+
+        public List<Rider> RegisteredRiders => registeredRiders;
+
+        public List<Driver> RegisteredDrivers => registeredDrivers;
+    }
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            RideSharingSystem rideSharingSystem = new RideSharingSystem();
+            bool exit = false;
+
+            while (!exit)
+            {
+                Console.WriteLine("\nWelcome to the Ride-Sharing System:");
+                Console.WriteLine("1. Register as Rider");
+                Console.WriteLine("2. Register as Driver");
+                Console.WriteLine("3. Request a Ride (Rider)");
+                Console.WriteLine("4. Accept a Ride (Driver)");
+                Console.WriteLine("5. Complete a Trip (Driver)");
+                Console.WriteLine("6. View Ride History (Rider)");
+                Console.WriteLine("7. View Trip History (Driver)");
+                Console.WriteLine("8. Display All Trips");
+                Console.WriteLine("9. Exit");
+                Console.Write("Choose an option: ");
+                string choice = Console.ReadLine();
 
                 switch (choice)
                 {
-                    case 1:
-                       // Rider rid = new Rider();
-
-                        rid.Register();
-
-                        rid.displayprofile();
+                    case "1":
+                        rideSharingSystem.RegisterUser();
+                        break;
+                    case "2":
+                        rideSharingSystem.RegisterUser();
+                        break;
+                    case "3":
+                        Console.WriteLine("Enter Rider Name:");
+                        string riderName = Console.ReadLine();
+                        Rider rider = rideSharingSystem.RegisteredRiders.Find(r => r.Name.Equals(riderName, StringComparison.OrdinalIgnoreCase));
+                        if (rider != null)
+                        {
+                            rider.RequestRide(rideSharingSystem);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Rider not found.");
+                        }
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter Driver Name:");
+                        string driverName = Console.ReadLine();
+                        Driver driver = rideSharingSystem.RegisteredDrivers.Find(d => d.Name.Equals(driverName, StringComparison.OrdinalIgnoreCase));
 
                         break;
-
-                    case 2:
-                       // Trip t= new Trip();
-                        t.register_driver();
+                    case "5":
+                        Console.WriteLine("Enter Driver Name:");
+                        driverName = Console.ReadLine();
+                        driver = rideSharingSystem.RegisteredDrivers.Find(d => d.Name.Equals(driverName, StringComparison.OrdinalIgnoreCase));
+                        if (driver != null)
+                        {
+                            driver.ViewTripHistory();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Driver not found.");
+                        }
                         break;
-
-                    case 3:
-                        //Rider rider = new Rider();
-
-                        rid.request_ride();
+                    case "6":
+                        Console.WriteLine("Enter Rider Name:");
+                        riderName = Console.ReadLine();
+                        rider = rideSharingSystem.RegisteredRiders.Find(r => r.Name.Equals(riderName, StringComparison.OrdinalIgnoreCase));
+                        if (rider != null)
+                        {
+                            rider.ViewRideHistory();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Rider not found.");
+                        }
                         break;
-
-                    case 4:
-                        //Driver d = new Driver();
-                        d.acceptride();
+                    case "7":
+                        Console.WriteLine("Enter Driver Name:");
+                        driverName = Console.ReadLine();
+                        driver = rideSharingSystem.RegisteredDrivers.Find(d => d.Name.Equals(driverName, StringComparison.OrdinalIgnoreCase));
+                        if (driver != null)
+                        {
+                            driver.ViewTripHistory();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Driver not found.");
+                        }
                         break;
-
-                    case 5:
-                       // rideSharingSystem rss = new rideSharingSystem();
-
-                        rss.complete_trip();
+                    case "8":
+                        rideSharingSystem.DisplayAllTrips();
                         break;
-
-                    case 6:
-                        //Rider ri = new Rider();
-                        rid.viewridehistory();
+                    case "9":
+                        exit = true;
                         break;
-
-                    case 7:
-                        //Driver dr = new Driver();
-                        d.viewtriphistory();
-                        break;
-
-
-                    case 8:
-                        //rideSharingSystem rs = new rideSharingSystem();
-
-                        rss.display_all_trips();
-                        break;
-
-
-                    case 9:
-                        Console.WriteLine("Exit Successfully!");
-                        break;
-
                     default:
-                        Console.WriteLine("Invalid Choice!");
+                        Console.WriteLine("Invalid choice.");
                         break;
-
-
                 }
-            }while(choice!=9);
-
-
-
+            }
         }
-
-
     }
-
-
-
-
-
 }
-
-
-
