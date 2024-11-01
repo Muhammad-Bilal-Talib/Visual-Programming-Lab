@@ -48,9 +48,6 @@ Public Class Form1
 
     End Sub
 
-    'Private Sub send_bt_Click(sender As Object, e As EventArgs)
-    'MessageBox.Show("Submit Successfully!", "Submit", MessageBoxButtons.OKCancel)
-    ' End Sub
 
     Private Sub btn_gender_Click(sender As Object, e As EventArgs) Handles btn_gender.Click
         If male_rb.Checked Then
