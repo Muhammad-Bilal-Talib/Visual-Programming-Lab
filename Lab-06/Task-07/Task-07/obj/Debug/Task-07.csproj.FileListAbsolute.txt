@@ -1,0 +1,10 @@
+C:\Users\PMLS\source\repos\Task-07\Task-07\bin\Debug\Task-07.exe.config
+C:\Users\PMLS\source\repos\Task-07\Task-07\bin\Debug\Task-07.exe
+C:\Users\PMLS\source\repos\Task-07\Task-07\bin\Debug\Task-07.pdb
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task-07.csproj.AssemblyReference.cache
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task_07.Form1.resources
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task_07.Properties.Resources.resources
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task-07.csproj.GenerateResource.cache
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task-07.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task-07.exe
+C:\Users\PMLS\source\repos\Task-07\Task-07\obj\Debug\Task-07.pdb
