@@ -1,0 +1,21 @@
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.exe.config
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.exe
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.pdb
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.AssemblyReference.cache
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.SuggestedBindingRedirects.cache
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF_Act_02_Pizza.Form1.resources
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF_Act_02_Pizza.Properties.Resources.resources
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.GenerateResource.cache
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.CoreCompileInputs.cache
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.exe
+C:\Users\233543\source\repos\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.pdb
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.exe.config
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.exe
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\bin\Debug\WF Act-02 Pizza.pdb
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.AssemblyReference.cache
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF_Act_02_Pizza.Form1.resources
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF_Act_02_Pizza.Properties.Resources.resources
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.GenerateResource.cache
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.exe
+C:\Users\PMLS\Downloads\Act LAb-07-20241113T133818Z-001\WF Act-02 Pizza\WF Act-02 Pizza\obj\Debug\WF Act-02 Pizza.pdb
