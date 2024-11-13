@@ -1,0 +1,10 @@
+C:\Users\PMLS\source\repos\Task-09\Task-09\bin\Debug\Task-09.exe.config
+C:\Users\PMLS\source\repos\Task-09\Task-09\bin\Debug\Task-09.exe
+C:\Users\PMLS\source\repos\Task-09\Task-09\bin\Debug\Task-09.pdb
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task-09.csproj.AssemblyReference.cache
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task_09.Form1.resources
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task_09.Properties.Resources.resources
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task-09.csproj.GenerateResource.cache
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task-09.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task-09.exe
+C:\Users\PMLS\source\repos\Task-09\Task-09\obj\Debug\Task-09.pdb
