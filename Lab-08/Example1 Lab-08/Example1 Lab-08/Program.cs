@@ -5,7 +5,7 @@
  {
     static void Main() 
     {
-          string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + "c:\\Data\\Northwind.mdb;User Id=admin;Password=;";
+          string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + "C:\\Users\\233543\\Downloads\\Northwind.mdb;User Id=admin;Password=;";
           string queryString = "SELECT ProductID, UnitPrice, ProductName from products " + "WHERE UnitPrice > ? " + "ORDER BY UnitPrice DESC;";
           int paramValue = 5;
 
@@ -17,9 +17,11 @@
                connection.Open();
                OleDbDataReader reader = command.ExecuteReader();
 
-              while (reader.Read()) { 
+             Console.WriteLine("Product_ID\tUnit_Price\tProduct_Name\n");
+            while (reader.Read()) {
+                
 
-                                Console.WriteLine("\t{0}\t{1}\t{2}", reader[0], reader[1], reader[2]); } reader.Close(); 
+                                Console.WriteLine("\t{0}\t{1}\t\t{2}", reader[0], reader[1], reader[2]); } reader.Close(); 
               } 
 
         catch (Exception ex) { 
