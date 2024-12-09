@@ -1,0 +1,64 @@
+﻿<Window x:Class="Cricket_Team_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cricket_Team_Manager"
+        mc:Ignorable="d"
+            Title="Cricket Team Manager" Height="500" Width="800"
+    Background="Green">
+    <Grid Margin="10">
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="0,11,0,0"
+            Text="Cricket Team Manager" 
+            VerticalAlignment="Top" 
+            FontFamily="Arial Rounded MT Bold" FontSize="36"
+            Foreground="White" />
+
+        <Label Content="Player Name:" HorizontalAlignment="Left" Margin="208,91,0,0"
+        VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" />
+        <TextBox x:Name="txtbox_PlayerName" HorizontalAlignment="Left" Margin="347,92,0,0"
+          VerticalAlignment="Top" Width="220" Height="30" Padding="5"
+          BorderBrush="#FF34495E" BorderThickness="1" Background="#FFF0F3F4" Foreground="#FF061677" FontFamily="Arial Rounded MT Bold" />
+
+        <Button x:Name="Add_Player" HorizontalAlignment="Left" 
+         Margin="247,158,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="16" Foreground="White"
+         Click="Add_Player_Click" Background="#FF2DCD3C" FontWeight="Bold" FontFamily="Arial Rounded MT Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                     CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" 
+                     BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            Add Player
+        </Button>
+
+        <Button x:Name="Remove_Player" HorizontalAlignment="Left" 
+         Margin="427,158,0,0" VerticalAlignment="Top" Height="40" Width="140"
+         FontWeight="Bold" FontSize="16" Foreground="White" Background="#FFE70C26"
+         Click="Remove_Player_Click" FontFamily="Arial Rounded MT Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                     CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" 
+                     BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            Remove Player
+        </Button>
+
+
+        <Label Content="Team Players List:" HorizontalAlignment="Left" Margin="84,246,0,0"
+        VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" FontFamily="Arial Rounded MT Bold" />
+        <ListBox x:Name="Player_ListBox" Margin="247,274,133,0" VerticalAlignment="Top"
+          Width="400" Height="180" Background="#FFF0F3F4" FontSize="14" Padding="5"
+          BorderBrush="#FF020FA4" BorderThickness="1" Foreground="#FF021886" />
+        <Border Background="#FFDB7812" Height="5" Margin="0,222,0,237" />
+    </Grid>
+</Window>

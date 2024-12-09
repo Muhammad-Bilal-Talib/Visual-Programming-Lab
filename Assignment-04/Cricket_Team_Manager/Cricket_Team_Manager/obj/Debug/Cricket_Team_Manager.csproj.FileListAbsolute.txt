@@ -1,0 +1,15 @@
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.csproj.AssemblyReference.cache
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\MainWindow.g.cs
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\App.g.cs
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager_MarkupCompile.cache
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager_MarkupCompile.lref
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\bin\Debug\Cricket_Team_Manager.exe.config
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\bin\Debug\Cricket_Team_Manager.exe
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\bin\Debug\Cricket_Team_Manager.pdb
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\MainWindow.baml
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.g.resources
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.Properties.Resources.resources
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.csproj.GenerateResource.cache
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.exe
+C:\Users\PMLS\source\repos\Cricket_Team_Manager\Cricket_Team_Manager\obj\Debug\Cricket_Team_Manager.pdb
