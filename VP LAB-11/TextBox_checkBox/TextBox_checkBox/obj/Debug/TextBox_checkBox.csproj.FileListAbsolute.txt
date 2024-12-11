@@ -1,0 +1,16 @@
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.csproj.AssemblyReference.cache
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.csproj.SuggestedBindingRedirects.cache
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\MainWindow.g.cs
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\App.g.cs
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox_MarkupCompile.cache
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox_MarkupCompile.lref
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\bin\Debug\TextBox_checkBox.exe.config
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\bin\Debug\TextBox_checkBox.exe
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\bin\Debug\TextBox_checkBox.pdb
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\MainWindow.baml
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.g.resources
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.Properties.Resources.resources
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.csproj.GenerateResource.cache
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.csproj.CoreCompileInputs.cache
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.exe
+C:\Users\233543\source\repos\TextBox_checkBox\TextBox_checkBox\obj\Debug\TextBox_checkBox.pdb
